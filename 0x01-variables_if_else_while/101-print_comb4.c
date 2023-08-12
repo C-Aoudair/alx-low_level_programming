@@ -6,18 +6,16 @@
  */
 int main(void)
 {
-int i;
-int m = '1';
-int n = '2';
-int k;
+int i = '0';
 int j;
+int k;
 
-for (i = '0'; i <= '9'; i++)
+for (; i <= '9'; i++)
 {
-	j = m;
+	j = i + 1;
 	for ( ; j <= '9'; j++)
 	{
-		k = n;
+		k = j + 1;
 		for ( ; k <= '9'; k++)
 		{
 			putchar(i);
@@ -29,10 +27,7 @@ for (i = '0'; i <= '9'; i++)
 				putchar(' ');
 			}
 		}
-	n++;
 	}
-	m++;
-	n = m + 1;
 }
 putchar('\n');
 return (0);
