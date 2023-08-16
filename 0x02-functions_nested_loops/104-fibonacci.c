@@ -19,5 +19,6 @@ int main(void)
 		n = k;
 		printf(", %lu", k);
 	}
+	printf("\n");
 	return (0);
 }
