@@ -12,7 +12,7 @@ int main(void)
 	unsigned long k;
 
 	printf("%lu, %lu", m, n);
-	for (i = 0; i < 98; i++)
+	for (i = 0; i < 97; i++)
 	{
 		k = m + n;
 		m = n;
