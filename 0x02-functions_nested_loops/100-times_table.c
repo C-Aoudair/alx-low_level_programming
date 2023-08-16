@@ -40,8 +40,8 @@ if (n < 15 && n > 0)
 				_putchar(' ');
 				_putchar('0' + l);
 			}
-			_putchar('\n');
 		}
+		_putchar('\n');
 	}
 }
 }
