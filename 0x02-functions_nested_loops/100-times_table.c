@@ -1,18 +1,22 @@
 #include "main.h"
 /**
  * print_times_table - print the n table starting with 0
+ * @n: the number of the table
  *
  */
 void print_times_table(int n)
 {
+	int i;
+	int j;
 	int m;
 	int l;
+
 if (n > 15 || n < 0)
 {
-	for (int i = 0; i <= n; i++)
+	for (i = 0; i <= n; i++)
 	{
 		_putchar('0');
-		for (int j = 1; j <= n; j++)
+		for (j = 1; j <= n; j++)
 		{
 			_putchar(',');
 			_putchar(' ');
