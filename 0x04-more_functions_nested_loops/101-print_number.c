@@ -6,13 +6,17 @@
  */
 void print_number(int n)
 {
-	long int i = 10;
+	int i = 10;
 
 	if (n < 0)
 	{
 		n = -n;
 		_putchar('-');
 	}
+	if (n > 1000000000)
+	{
+		_putchar('0' + n / 1000000000);
+		n = n % 1000000000;
 	while (1)
 	{
 		if (n / i == 0)
