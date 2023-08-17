@@ -6,12 +6,12 @@
  */
 void print_number(int n)
 {
-	int i = 10;
+	long i = 10;
 
 	if (n < 0)
 	{
 		n = -n;
-		_putchar(' ');
+		_putchar('-');
 	}
 	while (1)
 	{
