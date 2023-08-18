@@ -30,6 +30,6 @@ if (n != 0)
 }
 	else
 {
-	_putcahr('0');
+	_putchar('0');
 }
 }
