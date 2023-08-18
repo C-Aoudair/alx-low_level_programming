@@ -6,6 +6,8 @@
  */
 void print_number(int n)
 {
+if (n <= 2147483648 || n >= -2147483648)
+{
 	int j = 1000000000;
 if (n != 0)
 {
@@ -31,5 +33,6 @@ if (n != 0)
 	else
 {
 	_putchar('0');
+}
 }
 }
