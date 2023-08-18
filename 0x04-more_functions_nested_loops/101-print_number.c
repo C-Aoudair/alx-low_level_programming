@@ -6,33 +6,34 @@
  */
 void print_number(int n)
 {
-if (n <= 2147483648 || n >= -2147483648)
-{
 	int j = 1000000000;
-if (n != 0)
-{
-	if (n < 0)
+
+	if (n <= 2147483648 || n >= -2147483648)
 	{
-		n = -n;
-		_putchar('-');
+		if (n != 0)
+		{
+			if (n < 0)
+			{
+				n = -n;
+				putchar('-');
+			}
+			while (1)
+			{
+				if (n / j != 0)
+					break;
+				j = j / 10;
+			}
+			while (j != 1)
+			{
+				putchar('0' + n / j);
+				n = n % j;
+				j = j / 10;
+			}
+			putchar('0' + n);
+		}
+		else
+		{
+			putchar('0');
+		}
 	}
-	while (1)
-	{
-		if (n / j != 0)
-			break;
-		j = j / 10;
-	}
-	while (j != 1)
-	{
-		_putchar('0' + n / j);
-		n = n % j;
-		j = j / 10;
-	}
-	_putchar('0' + n);
-}
-	else
-{
-	_putchar('0');
-}
-}
 }
