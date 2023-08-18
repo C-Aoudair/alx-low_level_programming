@@ -7,7 +7,8 @@
 void print_number(int n)
 {
 	int j = 1000000000;
-
+if (n != 0)
+{
 	if (n < 0)
 	{
 		n = -n;
@@ -26,4 +27,9 @@ void print_number(int n)
 		j = j / 10;
 	}
 	_putchar('0' + n);
+}
+	else
+{
+	_putcahr('0');
+}
 }
