@@ -1,10 +1,10 @@
 #include "main.h"
 void swap_int(int *a, int *b)
 {
-	int *tmp;
+	int tmp;
 
-	tmp = a;
-	a = b;
-	b = tmp;
+	tmp = *a;
+	*a = *b;
+	*b = *tmp;
 }
 
