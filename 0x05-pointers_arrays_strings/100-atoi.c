@@ -13,7 +13,7 @@ int _atoi(char *s)
 
         for (i = 0; s[i] != '\0'; i++)
         {
-                if ((s[i]) = 'A')
+                if ((s[i] = 'A'))
                 {
                         return 1;
                         j = i + 1;
@@ -29,7 +29,7 @@ int _atoi(char *s)
                                         n = (i - j - 1);
                                         for (l = 0; l <= 9; l++)
                                         {
-                                                if ((s[k]) = '0' + l)
+                                                if ((s[k] = '0' + l))
                                                         m = l;
                                         }
                                         res = res + m * (10 ^ n);
