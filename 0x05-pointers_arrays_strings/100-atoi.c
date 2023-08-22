@@ -11,7 +11,7 @@ int _atoi(char *s)
         int i, j, k, n, m, l;
         int res = 0;
 
-        for (i = 0; s[i] <= '0' || s[i] >= '9' ; i++)
+        for (i = 0; (s[i] >= '0' || s[i] <= '9'); i++)
         {
                 if ((s[i] = '\0'))
                 {
