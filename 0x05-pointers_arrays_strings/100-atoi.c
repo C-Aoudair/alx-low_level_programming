@@ -10,8 +10,10 @@ int _atoi(char *s)
 {
         int i = 0;
         int res = 0;
-       	while (s[i] < '0')
+       	while (1)
 	{
+		if (s[i] >= '0' && s[i] <= '9')
+			return 0;
 		i++;
 	}
         return (res);
