@@ -13,7 +13,27 @@ int _atoi(char *s)
        	while (1)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
-			return 0;
+		{
+			j = i;
+			while (1)
+			{
+				if (s[i] < '0' || s[i] > '9')
+					break;
+				i++;
+			}
+			n = (i - j -1);
+			for (k = j; k < i; k++)
+			{
+				for (l = 0; l <= 9; l++)
+				{
+					if ((s[k] = '0' + l))
+						m = i;
+				}
+				res = res + m * (10 ^ n);
+				n--;
+			}
+			return (res);
+		}
 		i++;
 	}
 }
