@@ -28,7 +28,7 @@ int _atoi(char *s)
 			{
 				for (l = 0; l <= 9; l++)
 				{
-					if ((s[k] = '0' + l))
+					if ((s[k] == '0' + l))
 						m = i;
 				}
 				res = res + m * (10 ^ n);
