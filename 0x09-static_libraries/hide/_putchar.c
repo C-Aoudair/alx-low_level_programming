@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * _putchar - print a character to the screen.
- * @c: the character.
+ * _putchar: print a char.
+ * @c: the char.
  *
- * Return: nothing.
+ * Return: always 0.
  */
 int _putchar(char c)
 {
