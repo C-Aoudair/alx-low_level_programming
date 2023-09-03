@@ -1,5 +1,21 @@
 #include "main.h"
-#include <stdio.h>
+/**
+ * _pow - get m power n.
+ * @m: the base.
+ * @n: the power.
+ *
+ * Return: The power of m.
+ */
+int _pow(int m, int n)
+{
+	int res;
+	int i;
+
+	res = 1;
+	for (i = 0; i < n; i++)
+		res = res * m;
+	return (res);
+}
 /**
  * _atoi - convert a string to integer.
  * @s: the string to be converted.
@@ -8,34 +24,44 @@
  */
 int _atoi(char *s)
 {
-        int i = 0;
-	int j, k, l, m, n;
+	int i, j, n;
 	int res;
+	int digit;
+	int test;
+	int sign;
 
-       	while (1)
+	res = 0;
+	sign = 0;
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] >= '0' && s[i] <= '9')
+		test = i;
+		if (s[i] == '-')
+			sign = sign + 1;
+		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			j = i;
-			while (1)
+		for ( ; s[j] >= '0' && s[j] <= '9'; j++)
+		{
+		}
+			for ( ; i < j; i++)
 			{
-				if (s[i] < '0' || s[i] > '9')
-					break;
-				i++;
-			}
-			n = (i - j -1);
-			for (k = j; k < i; k++)
-			{
-				for (l = 0; l <= 9; l++)
+				for (n = 0; n <= 9; n++)
 				{
-					if ((s[k] == '0' + l))
-						m = i;
+					if (s[i] == '0' + n)
+					{
+						digit = n;
+						break;
+					}
 				}
-				res = res + m * (10 ^ n);
-				n--;
+				res = res + digit * _pow(10, j - i - 1);
 			}
+		}
+		if (test != i)
+		{
+			if (sign % 2)
+				return (-res);
 			return (res);
 		}
-		i++;
 	}
+	return (0);
 }
