@@ -25,7 +25,7 @@ int _pow(int m, int n)
 int _atoi(char *s)
 {
 	int i, j, n;
-	int res;
+	unsigned int res;
 	int digit;
 	int test;
 	int sign;
