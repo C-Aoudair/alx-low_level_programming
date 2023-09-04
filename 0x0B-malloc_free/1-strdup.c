@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 /**
  * _strdup - returns a pointer to a new str which is duplicate of  a given str.
  * @str: The string that must be copied into the newly string.
@@ -17,17 +16,15 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	if (str != NULL)
+	n = strlen(str);
+	cpy = malloc(n + 1);
+	if (cpy != NULL)
 	{
-		n = strlen(str);
-		cpy = malloc(n + 1);
-		if (cpy != NULL)
+		for (i = 0; i <= n; i++)
 		{
-			for (i = 0; i <= n; i++)
-			{
-				cpy[i] = str[i];
-			}
+			cpy[i] = str[i];
 		}
+	}
 	}
 	return (cpy);
 }
