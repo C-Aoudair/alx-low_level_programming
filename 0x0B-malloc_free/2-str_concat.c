@@ -19,7 +19,12 @@ char *str_concat(char *s1, char *s2)
 	if (s1 != NULL && s2 == NULL)
 		return (s1);
 	if (s1 == NULL && s2 == NULL)
-		return(con);
+	{
+		con = malloc(1);
+		if (con != NULL)
+			con[0] = '\0';
+		return (con);
+	}
 	n1 = strlen(s1);
 	n2 = strlen(s2);
 	con = malloc(n1 + n2 + 1);
