@@ -58,7 +58,9 @@ char **strtow(char *str)
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
 	n1 = words_number(str);
-	table = malloc(n1 + 1);
+	if (n1 == 0)
+		return (NULL);
+	table = malloc((n1 + 1) * 8);
 	if (table == NULL)
 		return (NULL);
 	for (j = 0, i = 0; j < n1; j++)
