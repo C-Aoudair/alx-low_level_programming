@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * array_iterator - executes a function given as parameter on each el of an ar.
  * @array: The array.
