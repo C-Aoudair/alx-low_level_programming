@@ -15,16 +15,12 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	while (i < 6)
+	while (i < 5)
 	{
 		if (*s == *ops[i].op)
-			break;
+			return (ops[i].f);
 		i++;
 	}
-	if (i == 6)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	return (ops[i].f);
+	printf("Error\n");
+	exit(99);
 }
