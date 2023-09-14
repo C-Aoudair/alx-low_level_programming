@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include "3-calc.h"
+/**
+ * main - perferms a simple operators.
+ * @argc: the number of commond line arguments.
+ * @argv: The command line arguments.
+ *
+ * Return: 0 if secceed.
+ */
 int main(int argc, char **argv)
 {
 	int res;

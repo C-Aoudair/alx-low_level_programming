@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * op_add: Add two numbers.
+ * op_add - Add two numbers.
  * @a: The first number.
  * @b: The second number.
  *
@@ -23,7 +23,7 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-	return (a -(b));
+	return (a - (b));
 }
 
 /**
