@@ -3,7 +3,7 @@
 
 
 /**
- * print_listnt - Prints all elements of a list_t list.
+ * print_listint - Prints all elements of a list_t list.
  * @h: A list.
  *
  * Return: The number of node.
