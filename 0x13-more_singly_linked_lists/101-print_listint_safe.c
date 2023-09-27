@@ -13,7 +13,11 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *ptr;
 	size_t count, i;
 
+	if (head == NULL)
+		exit(98);
 	list = malloc(8);
+	if (list == NULL)
+		exit(98);
 	*list = head;
 	count = 0;
 	for (ptr = head; ptr->next != NULL; ptr = ptr->next)
@@ -29,6 +33,8 @@ size_t print_listint_safe(const listint_t *head)
 				return (count);
 			}
 		list = realloc(list, (1 + count) * 8);
+		if (list == NULL)
+			exit(98);
 		*(list + count) = ptr->next;
 	}
 	free(list);
