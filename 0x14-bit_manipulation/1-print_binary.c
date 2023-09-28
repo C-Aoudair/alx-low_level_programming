@@ -14,10 +14,12 @@ void print_binary(unsigned long int n)
 
 	i = 0;
 	bit = 1;
-	while (!(n & bit << (63 - i)) && i < 64)
+
+	while (!(n & bit << (63 - i)) && i < 63)
+	{
 		i++;
-	if (i == 64)
-		printf("0");
+	}
+
 	for ( ; i < 64; i++)
 	{
 		if (n & bit << (63 - i))
