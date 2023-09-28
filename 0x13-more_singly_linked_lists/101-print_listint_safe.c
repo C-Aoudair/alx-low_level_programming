@@ -14,12 +14,12 @@ size_t print_listint_safe(const listint_t *head)
 	size_t count = 0, i;
 
 	if (head != NULL)
-	{
+		return (NULL);
 	list = malloc(8);
 	if (list == NULL)
 		exit(98);
 	*list = head;
-	for (ptr = head; ptr->next != NULL; ptr = ptr->next)
+	for (ptr = head; ptr != NULL; ptr = ptr->next)
 	{
 		printf("[%p] %d\n", (void *)ptr, ptr->n);
 		count = count + 1;
@@ -37,7 +37,6 @@ size_t print_listint_safe(const listint_t *head)
 		*(list + count) = ptr->next;
 	}
 	free(list);
-	}
 	return (count);
 }
 
