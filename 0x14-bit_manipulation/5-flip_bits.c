@@ -19,7 +19,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		return (0);
 	bit_mask = 1;
 	count = 0;
-	for (i = 0; i < 63 && tmp != 0; i++)
+	for (i = 0; i < 64 && tmp != 0; i++)
 	{
 		if (tmp & bit_mask << i)
 			count = count + 1;
