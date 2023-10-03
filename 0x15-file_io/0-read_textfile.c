@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 
 /**
@@ -24,7 +25,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	size = read(fd, buf, letters);
 	close(fd);
-	write(1, buf, size);
+	if (size == (ssize_t)letters)
+		write(1, buf, size);
+	else
+		write(2, buf, size);
 	free(buf);
 	return (size);
 }
