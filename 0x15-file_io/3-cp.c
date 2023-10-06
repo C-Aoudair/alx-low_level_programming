@@ -36,19 +36,19 @@ int main(int argc, char **argv)
 	}
 	do {
 		check1 = read(fd1, buf, 1024);
-		if (check1 == 0 || check1 == -1)
+		if (check1 == -1)
 		{
 			dprintf(STDERR_FILENO, "Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		check2 = write(fd2, buf, check1);
-		if (check2 == 0 || check2 == -1)
+		if (check2 == -1)
 		{
 			 dprintf(STDERR_FILENO, "Can't write to %s\n", argv[2]);
 			 exit(99);
 		}
 		printf("I was here\n");
-	} while (check1 == 1024);
+	} while (check1);
 	if (close(fd2))
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd2);
