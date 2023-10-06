@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	check = write(fd2, buf, 1024);
+	check = write(fd2, buf, check);
 	if (check == 0 || check == -1)
 	{
 		 dprintf(STDERR_FILENO, "Can't write to %s\n", argv[2]);
