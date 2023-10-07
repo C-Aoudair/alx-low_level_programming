@@ -35,8 +35,8 @@ int main(int argc, char **argv)
 		check2 = write(fd2, buf, check1);
 		if (check2 == -1)
 		{
-			 dprintf(STDERR_FILENO, "%s%s\n", Error2, argv[2]);
-			 exit(99);
+			dprintf(STDERR_FILENO, "%s%s\n", Error2, argv[2]);
+			exit(99);
 		}
 	} while (check1 == 1024);
 
