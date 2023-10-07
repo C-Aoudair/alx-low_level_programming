@@ -47,7 +47,6 @@ int main(int argc, char **argv)
 			 dprintf(STDERR_FILENO, "Can't write to %s\n", argv[2]);
 			 exit(99);
 		}
-		printf("I was here\n");
 	} while (check1);
 	if (close(fd2))
 	{
