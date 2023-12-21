@@ -28,16 +28,25 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->value = strdup(value);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	/*if (ht->array[index] == NULL)
-	{*/
+	if (ht->array[index] == NULL)
+	{
+		new->key = strdup(key);
+		new->value = strdup(value);
 		new->next = NULL;
 		ht->array[index] = new;
-	/*}
+	}
 	else
 	{
-		new->next = ht->array[index];
-		ht->array[index] = new;
-	}*/
+		if (strcmp(key, (ht->array[index])->key) == 0)
+			(ht->array[index])->value = strdup(value);
+		else
+		{
+			new->key = strdup(key);
+			new->value = strdup(value);
+			new->next = ht->array[index];
+			ht->array[index] = new;
+		}
+	}
 
 	return (1);
 }
