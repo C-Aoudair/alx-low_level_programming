@@ -24,7 +24,7 @@ int binary_assistance(int *array, size_t start, size_t end, int value)
     if (array[middle] == value)
         return (middle);
     if (array[middle] < value)
-        start = start + middle + 1;
+        start = middle + 1;
     else
         end = middle - 1;
     
