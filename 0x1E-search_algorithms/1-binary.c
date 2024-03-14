@@ -8,9 +8,9 @@
  * @array: A pointer to the first element of the array to search
  * @value: The value to search for
 */
-int binary_assistance(int *array, size_t start, size_t end, int value)
+int binary_assistance(int *array, int start, int end, int value)
 {
-    size_t middle, i;
+    int middle, i;
 
     if (start > end)
         return (-1);
