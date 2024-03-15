@@ -15,7 +15,7 @@ int binary_assistance(int *array, int start, int end, int value)
     if (start > end)
         return (-1);
     
-    printf("Serching in array:");
+    printf("Searching in array:");
     for (i = start; i < end; i++)
         printf("%i, ", array[i]);
     printf("%i\n", array[i]);
