@@ -10,25 +10,25 @@
 */
 int binary_assistance(int *array, int start, int end, int value)
 {
-    int middle, i;
+	int middle, i;
 
-    if (start > end)
-        return (-1);
-    
-    printf("Searching in array: ");
-    for (i = start; i < end; i++)
-        printf("%i, ", array[i]);
-    printf("%i\n", array[i]);
-    
-    middle = (end + start) / 2;
-    if (array[middle] == value && array[middle - 1] < value)
-        return (middle);
-    if (array[middle] < value)
-        start = middle + 1;
-    else
-        end = middle;
-    
-    return (binary_assistance(array, start, end, value));
+	if (start > end)
+		return (-1);
+	
+	printf("Searching in array: ");
+	for (i = start; i < end; i++)
+		printf("%i, ", array[i]);
+	printf("%i\n", array[i]);
+	
+	middle = (end + start) / 2;
+	if (array[middle] == value && array[middle - 1] < value)
+		return (middle);
+	if (array[middle] < value)
+		start = middle + 1;
+	else
+		end = middle;
+	
+	return (binary_assistance(array, start, end, value));
 }
 
 
@@ -43,8 +43,8 @@ int binary_assistance(int *array, int start, int end, int value)
 
 int advanced_binary(int *array, size_t size, int value)
 {
-    if (array == NULL)
-        return (-1);
+	if (array == NULL)
+		return (-1);
 
-    return (binary_assistance(array, 0, size - 1, value));
+	return (binary_assistance(array, 0, size - 1, value));
 }
