@@ -21,16 +21,12 @@ int binary_assistance(int *array, int start, int end, int value)
     printf("%i\n", array[i]);
     
     middle = (end + start) / 2;
-    if (array[middle] == value)
-    {
-        if (array[middle - 1] == value)
-            return (binary_assistance(array, start, middle, value));
+    if (array[middle] == value && array[middle - 1] < value)
         return (middle);
-    }
     if (array[middle] < value)
         start = middle + 1;
     else
-        end = middle - 1;
+        end = middle;
     
     return (binary_assistance(array, start, end, value));
 }
