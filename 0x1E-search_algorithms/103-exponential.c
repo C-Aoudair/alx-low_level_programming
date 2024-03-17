@@ -45,19 +45,24 @@ int binary_assistance(int *array, int start, int end, int value)
 int exponential_search(int *array, size_t size, int value)
 {
 	int start, end;
-	size_t i = 1;
+	size_t i;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
-	while (array[i] <= value && i < size)
+	i = 1;
+	start = 0;
+	end = 0;
+	while ((i < size) && (array[i] <= value))
 	{
 		printf("Value checked array[%li] = [%i]\n", i, array[i]);
 		i = i * 2;
 	}
 
-	start = i / 2;
-	end = i <= size - 1 ? i : size - 1;
+	 start = i / 2;
+	if (i >= size)
+		i = size - 1;
+	end = i;
 	printf("Value found between indexes [%i] and [%i]\n", start, end);
 
 	return (binary_assistance(array, start, end, value));
