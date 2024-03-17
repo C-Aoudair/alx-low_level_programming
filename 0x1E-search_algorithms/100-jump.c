@@ -2,7 +2,7 @@
 #include <math.h>
 
 /**
- * linear_search - searchs for a value in an array of integers
+ * linear_search_2 - searchs for a value in an array of integers
  * @size: the number of element in array
  * @array: A pointer to the first element of the array to search
  * @value: The value to search for
@@ -50,8 +50,13 @@ int jump_search(int *array, size_t size, int value)
 			printf("Value found between indexes [%li] and [%li]\n", i - step, i);
 			return (linear_search_2(array, step, i - step, value));
 		}
-		else
-			printf("Value checked array[%li] = [%i]\n", i, array[i]);
+		printf("Value checked array[%li] = [%i]\n", i, array[i]);
+	}
+	if ((array[i] >= value) && (i >= size))
+	{
+		i = size - 1;
+		printf("Value found between indexes [%li] and [%li]\n", i - step, i);
+		return (linear_search_2(array, step, i - step, value));
 	}
 	return (-1);
 }
