@@ -7,6 +7,8 @@
  * @end: location to end searching at
  * @array: A pointer to the first element of the array to search
  * @value: The value to search for
+ *
+ * Return: The index of the value of -1 if not found or array is null
 */
 int binary_assistance(int *array, int start, int end, int value)
 {
