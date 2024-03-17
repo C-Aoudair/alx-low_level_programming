@@ -4,6 +4,7 @@
 /**
  * linear_search_2 - searchs for a value in an array of integers
  * @size: the number of element in array
+ * @step: the subarray that should be searched in
  * @array: A pointer to the first element of the array to search
  * @value: The value to search for
  * @index: the index to start search from
@@ -11,14 +12,14 @@
  * Return: The index of the value of -1 if not found or array is null
 */
 
-int linear_search_2(int *array, size_t size, size_t index, int value)
+int linear_search_2(int *array, size_t size, size_t step, size_t index, int value)
 {
 	size_t i;
 
 	if (array == NULL)
 		return (-1);
 
-	for (i = index ; i <= index + size; i++)
+	for (i = index ; (i <= index + step && i < size); i++)
 	{
 		printf("Value checked array[%li] = [%i]\n", i, array[i]);
 		if (array[i] == value)
@@ -46,17 +47,9 @@ int jump_search(int *array, size_t size, int value)
 	for (i = 0; i < size; i += step)
 	{
 		if (array[i] >= value)
-		{
-			printf("Value found between indexes [%li] and [%li]\n", i - step, i);
-			return (linear_search_2(array, step, i - step, value));
-		}
+			break;
 		printf("Value checked array[%li] = [%i]\n", i, array[i]);
 	}
-	if ((array[i] >= value) && (i >= size))
-	{
-		i = size - 1;
-		printf("Value found between indexes [%li] and [%li]\n", i - step, i);
-		return (linear_search_2(array, step, i - step, value));
-	}
-	return (-1);
+	printf("Value found between indexes [%li] and [%li]\n", i - step, i);
+	return (linear_search_2(array,size,  step, i - step, value));
 }
