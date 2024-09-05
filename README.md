@@ -1,6 +1,12 @@
 # ALX Low-Level Programming
 
-![ALX Logo](https://www.alx-intranet.org/asset/logo.png)
+ For more information, visit [this link](https://www.alxafrica.com//).
+
+<p align="center">
+  <img src="http://www.alxafrica.com/wp-content/uploads/2022/01/header-logo.png"
+    alt="ALX Africa Logo"
+  >
+  </p>
 
 ## Overview
 
