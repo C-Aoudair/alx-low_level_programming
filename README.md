@@ -1,16 +1,15 @@
-# ALX Low-Level Programming Curriculum
+# ALX Low-Level Programming
 
-![ALX Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/ALX_Logo.png/800px-ALX_Logo.png)
+![ALX Logo](https://www.alx-intranet.org/asset/logo.png)
 
 ## Overview
 
-Welcome to the ALX Low-Level Programming curriculum! This repository is designed to provide a comprehensive foundation in low-level programming concepts as part of the ALX Software Engineering program. The projects within this repository cover a wide range of topics crucial for understanding the intricacies of programming close to the hardware.
+Welcome to the ALX Low-Level Programming! This repository is designed to provide a comprehensive foundation in low-level programming concepts as part of the ALX Software Engineering program. The projects within this repository cover a wide range of topics crucial for understanding the intricacies of programming close to the hardware.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Projects](#projects)
-- [How to Use](#how-to-use)
 - [License](#license)
 
 ## Introduction
@@ -45,10 +44,6 @@ This curriculum is structured to guide you through essential low-level programmi
 - **[0x1A-hash_tables](./0x1A-hash_tables)**: Learning about hash tables and their implementation.
 - **[0x1C-makefiles](./0x1C-makefiles)**: Mastering makefiles for automating the build process.
 - **[0x1E-search_algorithms](./0x1E-search_algorithms)**: Exploring various search algorithms and their efficiencies.
-
-## How to Use
-
-To get started with any of the projects, navigate to the corresponding directory and follow the instructions provided in the individual project files.
 
 ## License
 
